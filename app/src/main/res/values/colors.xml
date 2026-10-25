@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#078CC5</color>
+    <color name="primary_dark">#075477</color>
+    <color name="surface">#F5FAFD</color>
+    <color name="card">#FFFFFF</color>
+    <color name="on_surface">#10283A</color>
+    <color name="on_surface_muted">#587080</color>
+    <color name="call_green">#138A58</color>
+    <color name="icon_background">#0B6E8A</color>
+    <color name="divider">#DCEAF1</color>
+    <color name="accent_pale">#DDF5FF</color>
+</resources>
