@@ -418,7 +418,9 @@ class MainActivity : Activity() {
         row.addView(back, flp(-2, 60, g = Gravity.START or Gravity.CENTER_VERTICAL))
         if (rightText != null) row.addView(rightText, flp(-2, -2, rr = 29, g = Gravity.END or Gravity.CENTER_VERTICAL))
         return row
-      private fun infoRow(iconRes: Int, label: String, valueSize: Float, actionIcon: Int?, onAction: (() -> Unit)?, divider: Boolean): Pair<FrameLayout, TextView> {
+    }
+
+    private fun infoRow(iconRes: Int, label: String, valueSize: Float, actionIcon: Int?, onAction: (() -> Unit)?, divider: Boolean): Pair<FrameLayout, TextView> {
         val row = FrameLayout(this)
         row.addView(icon(iconRes, 38), flp(38, 38, l = 39, g = Gravity.START or Gravity.CENTER_VERTICAL))
         row.addView(tv(label, 34f, 0xFF3C5470.toInt(), MEDIUM).apply { setSingleLine(true); ellipsize = TextUtils.TruncateAt.END },
