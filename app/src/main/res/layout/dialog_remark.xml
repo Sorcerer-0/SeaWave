@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:padding="14dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/bg_dialog"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
+
+            <EditText
+                android:id="@+id/remarkInput"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:background="@drawable/bg_remark_field"
+                android:gravity="top|start"
+                android:hint="@string/remark_hint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="14dp"
+                android:textColor="@color/ink"
+                android:textColorHint="#9DB3C7"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/remarkClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="4dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/clear"
+                    android:textColor="@color/danger"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/remarkCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.seawave.serialcall.RibbonButtonView
+                    android:id="@+id/remarkCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    app:ribbonKind="small"
+                    app:ribbonLabel="@string/cancel"
+                    app:ribbonLight="true"
+                    app:ribbonTextSize="16sp" />
+
+                <com.seawave.serialcall.RibbonButtonView
+                    android:id="@+id/remarkSave"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1.2"
+                    app:ribbonKind="small"
+                    app:ribbonLabel="@string/save"
+                    app:ribbonTextSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.seawave.serialcall.RibbonButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="-4dp"
+            app:ribbonKind="title"
+            app:ribbonLabel="@string/remark_dialog_title" />
+
+        <ImageView
+            android:id="@+id/remarkClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="2dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:padding="9dp"
+            android:src="@drawable/ic_close"
+            android:tint="@color/ink" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1E9BE9</color>
+    <color name="primary_dark">#0A6EBD</color>
+    <color name="ribbon_start">#25BDF6</color>
+    <color name="ribbon_end">#0B74C4</color>
+    <color name="surface">#EEF6FD</color>
+    <color name="card">#FFFFFF</color>
+    <color name="ink">#17324D</color>
+    <color name="ink_soft">#2B5B8A</color>
+    <color name="muted">#5F7A94</color>
+    <color name="icon_blue">#1E8FDB</color>
+    <color name="avatar_icon">#5E88B5</color>
+    <color name="divider">#E4EDF6</color>
+    <color name="danger">#D64545</color>
+    <color name="icon_background">#EAF6FF</color>
+</resources>
