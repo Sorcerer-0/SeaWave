@@ -418,17 +418,15 @@ class MainActivity : Activity() {
         row.addView(back, flp(-2, 60, g = Gravity.START or Gravity.CENTER_VERTICAL))
         if (rightText != null) row.addView(rightText, flp(-2, -2, rr = 29, g = Gravity.END or Gravity.CENTER_VERTICAL))
         return row
-    }
-
-    private fun infoRow(iconRes: Int, label: String, valueSize: Float, actionIcon: Int?, onAction: (() -> Unit)?, divider: Boolean): Pair<FrameLayout, TextView> {
+      private fun infoRow(iconRes: Int, label: String, valueSize: Float, actionIcon: Int?, onAction: (() -> Unit)?, divider: Boolean): Pair<FrameLayout, TextView> {
         val row = FrameLayout(this)
         row.addView(icon(iconRes, 38), flp(38, 38, l = 39, g = Gravity.START or Gravity.CENTER_VERTICAL))
-        row.addView(tv(label, 27f, 0xFF3C5470.toInt()).apply { setSingleLine(true); ellipsize = TextUtils.TruncateAt.END },
-            flp(215, -2, l = 118, g = Gravity.START or Gravity.CENTER_VERTICAL))
+        row.addView(tv(label, 34f, 0xFF3C5470.toInt(), MEDIUM).apply { setSingleLine(true); ellipsize = TextUtils.TruncateAt.END },
+            flp(275, -2, l = 112, g = Gravity.START or Gravity.CENTER_VERTICAL))
         val value = tv("—", valueSize, 0xFF10243C.toInt(), if (valueSize >= 30f) BOLD else MEDIUM).apply {
             setSingleLine(true); ellipsize = TextUtils.TruncateAt.END
         }
-        row.addView(value, flp(290, -2, l = 338, g = Gravity.START or Gravity.CENTER_VERTICAL))
+        row.addView(value, flp(235, -2, l = 395, g = Gravity.START or Gravity.CENTER_VERTICAL))
         if (actionIcon != null) {
             row.addView(icon(actionIcon, 64, 15).apply { setOnClickListener { onAction?.invoke() } },
                 flp(64, 64, l = 631, g = Gravity.START or Gravity.CENTER_VERTICAL))
