@@ -44,6 +44,8 @@ import java.text.NumberFormat
 import java.util.Locale
 import kotlin.math.max
 import kotlin.math.roundToInt
+import android.graphics.Outline
+import android.view.ViewOutlineProvider
 
 class MainActivity : Activity() {
 
@@ -193,12 +195,16 @@ class MainActivity : Activity() {
         }
     }
 
-    @Suppress("DEPRECATION")
-    /** Keep a view above the elevated card it overlaps (elevation decides draw order). */
-    private fun lift(v: View) {
-        v.elevation = r(14).toFloat()
-        v.outlineProvider = ViewOutlineProvider.NONE
+@Suppress("DEPRECATION")
+/** Keep a view above the elevated card it overlaps (elevation decides draw order). */
+private fun lift(v: View) {
+    v.elevation = r(14).toFloat()
+    v.outlineProvider = object : ViewOutlineProvider() {
+        override fun getOutline(view: View, outline: Outline) {
+            outline.setEmpty()
+        }
     }
+}
 
     private fun insetsOf(ins: WindowInsets): IntArray =
         if (Build.VERSION.SDK_INT >= 30) {
